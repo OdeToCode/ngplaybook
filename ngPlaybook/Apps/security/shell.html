@@ -1,0 +1,31 @@
+﻿<html ng-app="security">
+<head>
+    <title>Ode To Food</title>
+    <link href="/styles/css/bootstrap.css" rel="stylesheet" />
+    <link href="/styles/animate.css" rel="stylesheet" />
+    <link href="/styles/site.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <nav ng-include="'templates/nav.html'"></nav> 
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div ng-view></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <script src="/js/angular/angular.js"></script>
+    <script src="/js/angular/angular-route.js"></script>
+    <script src="/js/angular/angular-animate.js"></script>
+    
+    <script src="/apps/common/module.js"></script>
+    <script src="/apps/common/js/services/authorization.js"></script>
+    
+    <script src="module.js"></script>
+    <script src="js/navController.js"></script>
+</body>
+</html>
