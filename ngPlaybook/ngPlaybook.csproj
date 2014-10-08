@@ -159,6 +159,7 @@
     <Compile Include="Server\Api\SecretController.cs" />
     <Compile Include="Server\Auth\OdeToFoodJwtOptions.cs" />
     <Compile Include="Server\Auth\OdeToFoodOAuthOptions.cs" />
+    <Compile Include="Server\Auth\OdeToFoodOAuthProvider.cs" />
     <Compile Include="Server\Models\Recipe.cs" />
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />

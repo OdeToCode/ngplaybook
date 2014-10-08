@@ -20,13 +20,19 @@
 
             var login = function (username, password) {
 
+                var configuration = {
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    }
+                };
+
                 var data = formEncode({
                     username: username,
                     password: password,
                     grant_type: "password"
                 });
 
-                $http.post(url, data).then(function(response) {
+                $http.post(url, data, configuration).then(function (response) {
                     // todo process response
                 });
             };

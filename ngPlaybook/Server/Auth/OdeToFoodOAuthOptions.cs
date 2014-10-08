@@ -10,6 +10,7 @@ namespace NgPlaybook.Server.Auth
         {
             TokenEndpointPath = new PathString("/login");
             AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1);
+            Provider = new OdeToFoodOAuthProvider();
             #if DEBUG
                 AllowInsecureHttp = true;
             #endif
