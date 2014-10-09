@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="Apps\common\js\services\authorization.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
+    <Content Include="Apps\common\js\services\sessionStorage.js" />
     <Content Include="Apps\common\module.js" />
     <Content Include="Apps\security\js\navController.js" />
     <Content Include="Apps\security\module.js" />

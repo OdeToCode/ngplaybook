@@ -1,6 +1,6 @@
 ﻿(function (module) {
 
-    var authorization = function () {
+    var authorization = function (sessionStorage) {
 
         var self = this;
         var url = "/login";
