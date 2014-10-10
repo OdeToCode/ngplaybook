@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function(module) {
 
     var sessionStorage = function($window) {
 
@@ -27,6 +27,6 @@
         };
     };
 
-    angular.factory("sessionStorage", sessionStorage);
+    module.factory("sessionStorage", sessionStorage);
 
 }(angular.module("common")));

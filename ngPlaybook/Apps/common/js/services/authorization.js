@@ -1,6 +1,6 @@
 ﻿(function (module) {
 
-    var authorization = function (sessionStorage) {
+    var authorization = function () {
 
         var self = this;
         var url = "/login";
@@ -9,7 +9,7 @@
             url = newUrl;
         };
 
-        self.$get = function ($http, formEncode) {
+        self.$get = function ($http, formEncode, sessionStorage) {
             var user = {
                 username: "",
                 token: "",
