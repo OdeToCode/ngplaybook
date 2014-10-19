@@ -6,10 +6,10 @@
         <ul class="nav navbar-nav">
             <li><a href="#/secret">Secret recipe</a></li>
         </ul>
-        <div ng-if="nav.user.loggedIn" class="navbar-right">
-            {{ nav.user.username }}
+        <div ng-show="nav.user.loggedIn" class="navbar-text navbar-right">
+            Hello {{ nav.user.username }}!
         </div>
-        <form ng-if="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right" ng-submit="nav.login(loginForm)">
+        <form ng-show="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right" ng-submit="nav.login(loginForm)">
             <div class="form-group">
                 <input name="username" type="text" placeholder="Username" ng-model="nav.username" required />
             </div>

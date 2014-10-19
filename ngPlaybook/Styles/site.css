@@ -1,1 +1,86 @@
-﻿
+﻿input.ng-dirty.ng-invalid {
+    background-color: #ff0000;
+}
+
+.ng-move {
+    -webkit-animation: pulse 0.3s;
+    -moz-animation: pulse 0.3s;
+    -ms-animation: pulse 0.3s;
+    -o-animation: pulse 0.3s;
+    animation: pulse 0.3s;
+}
+
+.ng-enter {
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.ng-hide-add {
+    -webkit-animation: fadeOut 0.5s;
+    -moz-animation: fadeOut 0.5s;
+    -ms-animation: fadeOut 0.5s;
+    -o-animation: fadeOut 0.5s;
+    animation: fadeOut 0.5s;
+    display: block !important;
+}
+
+.ng-hide-remove {
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;    
+    display: block !important;
+}
+
+/*.workSpinner  {    
+    font-size: 10px;
+    position: absolute;
+    top: 14px;
+    right: 2px;
+}
+
+.workSpinner > span {
+    position: absolute;
+    left: 0px;
+    color: white;
+    top: 10px;
+}*/
+
+/*.workSpinner .ng-hide-remove {
+    -webkit-animation: fadeIn 0.3s;
+    -moz-animation: fadeIn 0.3s;
+    -ms-animation: fadeIn 0.3s;
+    -o-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+    display: block !important;
+}
+
+.workSpinner .ng-hide-add {
+    -webkit-animation: fadeOut 0.7s;
+    -moz-animation: fadeOut 0.7s;
+    -ms-animation: fadeOut 0.7s;
+    -o-animation: fadeOut 0.7s;
+    animation: fadeOut 0.7s;    
+    display: block !important;
+}*/
+
+
+/*.messages .ng-enter {
+    -webkit-animation: slideInLeft 1.0s;
+    -moz-animation: slideInLeft 1.0s;
+    -ms-animation: slideInLeft 1.0s;
+    -o-animation: slideInLeft 1.0s;
+    animation: slideInLeft 1.0s;
+}
+
+.messages .ng-leave {
+    -webkit-animation: slideOutRight 1.0s;
+    -moz-animation: slideOutRight 1.0s;
+    -ms-animation: slideOutRight 1.0s;
+    -o-animation: slideOutRight 1.0s;
+    animation: slideOutRight 1.0s;
+}*/

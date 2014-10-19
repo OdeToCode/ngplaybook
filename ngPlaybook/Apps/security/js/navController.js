@@ -1,6 +1,6 @@
 ﻿(function(module) {
 
-    var navController = function(authorization) {
+    var navController = function(authorization, errors) {
         var model = this;
 
         model.username = "";
@@ -8,8 +8,9 @@
         model.user = authorization.user;
         model.login = function(form) {
             if (form.$valid) {
-                authorization.login(model.username, model.password);
-            } 
+                authorization.login(model.username, model.password)
+                             .catch(errors.catcher("Could not login"));
+            }
         }
     };
 

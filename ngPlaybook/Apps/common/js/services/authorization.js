@@ -18,6 +18,14 @@
                 }
             };
 
+            var processToken = function (username) {
+                return function (response) {
+                    user.username = username;
+                    user.token = response.data.access_token;
+                    $http.defaults.headers.common["Authorization "] = "Bearer " + user.token;
+                }
+            };
+
             var login = function (username, password) {
 
                 var configuration = {
@@ -32,9 +40,7 @@
                     grant_type: "password"
                 });
 
-                $http.post(url, data, configuration).then(function (response) {
-                    // todo process response
-                });
+                return $http.post(url, data, configuration).then(processToken(username));
             };
 
             return {
