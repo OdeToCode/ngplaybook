@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
+using NgPlaybook.Server.Config;
 
 namespace NgPlaybook.Server.Auth
 {
@@ -8,8 +9,11 @@ namespace NgPlaybook.Server.Auth
     {
         public OdeToFoodOAuthOptions()
         {
-            TokenEndpointPath = new PathString("/login");
-            AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1);
+            var config = AppConfiguration.Config;
+
+            TokenEndpointPath = new PathString(config.TokenPath);
+            AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(config.ExpirationMinutes);
+            AccessTokenFormat = new OdeToFoodJwtWriterFormat();
             Provider = new OdeToFoodOAuthProvider();
             #if DEBUG
                 AllowInsecureHttp = true;

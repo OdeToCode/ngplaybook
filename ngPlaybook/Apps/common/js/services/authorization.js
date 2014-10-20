@@ -22,7 +22,8 @@
                 return function (response) {
                     user.username = username;
                     user.token = response.data.access_token;
-                    $http.defaults.headers.common["Authorization "] = "Bearer " + user.token;
+                    $http.defaults.headers.common["Authorization"] = "Bearer " + user.token;
+                    return username;
                 }
             };
 

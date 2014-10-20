@@ -1,7 +1,7 @@
 ﻿<nav class="navbar navbar-default" ng-controller="navController as nav">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Ode To Food</a>
+            <a class="navbar-brand" href="#/">Ode To Food</a>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="#/secret">Secret recipe</a></li>
@@ -9,7 +9,8 @@
         <div ng-show="nav.user.loggedIn" class="navbar-text navbar-right">
             Hello {{ nav.user.username }}!
         </div>
-        <form ng-show="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right" ng-submit="nav.login(loginForm)">
+        <form ng-if="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right" 
+              ng-submit="nav.login(loginForm)" novalidate>
             <div class="form-group">
                 <input name="username" type="text" placeholder="Username" ng-model="nav.username" required />
             </div>

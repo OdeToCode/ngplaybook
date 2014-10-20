@@ -67,6 +67,7 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.IdentityModel.Tokens.Jwt">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
@@ -104,9 +105,11 @@
     <Content Include="Apps\common\js\services\authorization.js" />
     <Content Include="Apps\common\js\services\errors.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
+    <Content Include="Apps\common\js\services\recipes.js" />
     <Content Include="Apps\common\js\services\sessionStorage.js" />
     <Content Include="Apps\common\module.js" />
     <Content Include="Apps\security\js\navController.js" />
+    <Content Include="Apps\security\js\secretController.js" />
     <Content Include="Apps\security\module.js" />
     <Content Include="Apps\security\shell.html" />
     <Content Include="Apps\security\templates\home.html" />
@@ -120,6 +123,7 @@
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
     <Content Include="packages.config" />
+    <Content Include="Protractor\pages\HomePage.js" />
     <Content Include="Protractor\securitySpecs.js" />
     <Content Include="Protractor\protractor.conf.js" />
     <Content Include="Styles\animate.css" />
@@ -146,7 +150,6 @@
     <Content Include="Js\angular\angular-sanitize.js" />
     <Content Include="Js\angular\angular-scenario.js" />
     <Content Include="Js\angular\angular-touch.js" />
-    <Content Include="Js\angular\angular-touch.min.js" />
     <Content Include="Js\angular\angular.js" />
     <Content Include="Styles\css\bootstrap.css" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.svg" />
@@ -160,8 +163,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server\Api\SecretController.cs" />
     <Compile Include="Server\Auth\OdeToFoodJwtOptions.cs" />
+    <Compile Include="Server\Auth\OdeToFoodJwtWriterFormat.cs" />
     <Compile Include="Server\Auth\OdeToFoodOAuthOptions.cs" />
     <Compile Include="Server\Auth\OdeToFoodOAuthProvider.cs" />
+    <Compile Include="Server\Config\AppConfiguration.cs" />
     <Compile Include="Server\Models\Recipe.cs" />
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />

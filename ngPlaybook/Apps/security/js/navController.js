@@ -6,6 +6,7 @@
         model.username = "";
         model.password = "";
         model.user = authorization.user;
+        model.message = "";
         model.login = function(form) {
             if (form.$valid) {
                 authorization.login(model.username, model.password)
