@@ -8,8 +8,11 @@
 <body>
 
     <nav ng-include="'templates/nav.html'"></nav>
-
+    
     <div class="container">
+        <div class="work-spinner">
+            <img src="/Apps/security/templates/ajax-loader.gif" />
+        </div>
         <div class="row">
             <div class="col-md-10">
                 <div ng-view></div>
@@ -28,6 +31,8 @@
     <script src="/apps/common/js/services/formEncode.js"></script>
     <script src="/apps/common/js/services/errors.js"></script>
     <script src="/apps/common/js/services/sessionStorage.js"></script>
+    <script src="/apps/common/js/services/requestCounter.js"></script>
+    <script src="../common/js/directives/workSpinner.js"></script>
     <script src="/apps/common/js/services/recipes.js"></script>
 
     <script src="module.js"></script>

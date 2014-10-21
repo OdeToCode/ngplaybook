@@ -5,7 +5,6 @@
 .ng-move {
     -webkit-animation: pulse 0.3s;
     -moz-animation: pulse 0.3s;
-    -ms-animation: pulse 0.3s;
     -o-animation: pulse 0.3s;
     animation: pulse 0.3s;
 }
@@ -13,7 +12,6 @@
 .ng-enter {
     -webkit-animation: fadeIn 0.5s;
     -moz-animation: fadeIn 0.5s;
-    -ms-animation: fadeIn 0.5s;
     -o-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
 }
@@ -21,7 +19,6 @@
 .ng-hide-add {
     -webkit-animation: fadeOut 0.5s;
     -moz-animation: fadeOut 0.5s;
-    -ms-animation: fadeOut 0.5s;
     -o-animation: fadeOut 0.5s;
     animation: fadeOut 0.5s;
     display: block !important;
@@ -30,43 +27,17 @@
 .ng-hide-remove {
     -webkit-animation: fadeIn 0.5s;
     -moz-animation: fadeIn 0.5s;
-    -ms-animation: fadeIn 0.5s;
     -o-animation: fadeIn 0.5s;
-    animation: fadeIn 0.5s;    
+    animation: fadeIn 0.5s;
     display: block !important;
 }
 
-/*.workSpinner  {    
-    font-size: 10px;
-    position: absolute;
-    top: 14px;
-    right: 2px;
+.work-spinner {
+    position: fixed;
+    z-index: 1;
+    left: 45%;
+    top: 65px;
 }
-
-.workSpinner > span {
-    position: absolute;
-    left: 0px;
-    color: white;
-    top: 10px;
-}*/
-
-/*.workSpinner .ng-hide-remove {
-    -webkit-animation: fadeIn 0.3s;
-    -moz-animation: fadeIn 0.3s;
-    -ms-animation: fadeIn 0.3s;
-    -o-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s;
-    display: block !important;
-}
-
-.workSpinner .ng-hide-add {
-    -webkit-animation: fadeOut 0.7s;
-    -moz-animation: fadeOut 0.7s;
-    -ms-animation: fadeOut 0.7s;
-    -o-animation: fadeOut 0.7s;
-    animation: fadeOut 0.7s;    
-    display: block !important;
-}*/
 
 
 /*.messages .ng-enter {

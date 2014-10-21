@@ -9,7 +9,7 @@
         <div ng-show="nav.user.loggedIn" class="navbar-text navbar-right">
             Hello {{ nav.user.username }}!
         </div>
-        <form ng-if="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right" 
+        <form ng-if="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right"
               ng-submit="nav.login(loginForm)" novalidate>
             <div class="form-group">
                 <input name="username" type="text" placeholder="Username" ng-model="nav.username" required />

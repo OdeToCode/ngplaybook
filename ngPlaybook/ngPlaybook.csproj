@@ -102,16 +102,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\common\js\directives\workSpinner.js" />
     <Content Include="Apps\common\js\services\authorization.js" />
     <Content Include="Apps\common\js\services\errors.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\recipes.js" />
+    <Content Include="Apps\common\js\services\requestCounter.js" />
     <Content Include="Apps\common\js\services\sessionStorage.js" />
     <Content Include="Apps\common\module.js" />
     <Content Include="Apps\security\js\navController.js" />
     <Content Include="Apps\security\js\secretController.js" />
     <Content Include="Apps\security\module.js" />
     <Content Include="Apps\security\shell.html" />
+    <Content Include="Apps\security\templates\ajax-loader.gif" />
     <Content Include="Apps\security\templates\home.html" />
     <Content Include="Apps\security\templates\nav.html" />
     <Content Include="Apps\security\templates\secret.html" />
