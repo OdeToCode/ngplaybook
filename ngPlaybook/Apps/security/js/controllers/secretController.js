@@ -8,7 +8,6 @@
 
         recipes.getSecret().then(function(recipe) {
             model.recipe = recipe;
-            console.log(recipe);
         });
 
     };

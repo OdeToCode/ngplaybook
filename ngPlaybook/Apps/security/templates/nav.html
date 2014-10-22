@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-default" ng-controller="navController as nav">
+﻿<nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#/">Ode To Food</a>
@@ -6,18 +6,21 @@
         <ul class="nav navbar-nav">
             <li><a href="#/secret">Secret recipe</a></li>
         </ul>
-        <div ng-show="nav.user.loggedIn" class="navbar-text navbar-right">
-            Hello {{ nav.user.username }}!
+        <div ng-controller="loginController as login">
+            <div ng-show="login.user.loggedIn" class="navbar-text navbar-right">
+                Hello {{ login.user.username }}!
+                <button class="btn btn-default btn-sm" ng-click="login.signOut()">Sign Out</button>
+            </div>
+            <form ng-if="!login.user.loggedIn" name="loginForm" class="navbar-form navbar-right"
+                  ng-submit="login.login(loginForm)" novalidate>
+                <div class="form-group">
+                    <input name="username" type="text" placeholder="Username" ng-model="login.username" required />
+                </div>
+                <div class="form-group">
+                    <input name="password" type="password" placeholder="Password" ng-model="login.password" required />
+                </div>
+                <input class="btn btn-default btn-sm" type="submit" value="Login" />
+            </form>
         </div>
-        <form ng-if="!nav.user.loggedIn" name="loginForm" class="navbar-form navbar-right"
-              ng-submit="nav.login(loginForm)" novalidate>
-            <div class="form-group">
-                <input name="username" type="text" placeholder="Username" ng-model="nav.username" required />
-            </div>
-            <div class="form-group">
-                <input name="password" type="password" placeholder="Password" ng-model="nav.password" required />
-            </div>
-            <input class="btn btn-default" type="submit" value="Login" />
-        </form>
     </div>
 </nav>

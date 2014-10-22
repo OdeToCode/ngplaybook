@@ -1,5 +1,5 @@
-﻿input.ng-dirty.ng-invalid {
-    background-color: #ff0000;
+﻿input.ng-touched.ng-invalid {
+    border: 2px #ff0000 solid;
 }
 
 .ng-move {
@@ -38,20 +38,3 @@
     left: 45%;
     top: 65px;
 }
-
-
-/*.messages .ng-enter {
-    -webkit-animation: slideInLeft 1.0s;
-    -moz-animation: slideInLeft 1.0s;
-    -ms-animation: slideInLeft 1.0s;
-    -o-animation: slideInLeft 1.0s;
-    animation: slideInLeft 1.0s;
-}
-
-.messages .ng-leave {
-    -webkit-animation: slideOutRight 1.0s;
-    -moz-animation: slideOutRight 1.0s;
-    -ms-animation: slideOutRight 1.0s;
-    -o-animation: slideOutRight 1.0s;
-    animation: slideOutRight 1.0s;
-}*/

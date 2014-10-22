@@ -15,4 +15,4 @@
 
     module.factory("recipes", recipes);
 
-}(angular.module("common")))
+}(angular.module("security")))

@@ -1,27 +1,51 @@
 ﻿(function (module) {
 
+    var USERKEY = "utoken";
+
+    var initializeUser = function (localStorage) {
+        var user = {
+            username: "",
+            token: "",
+            get loggedIn() {
+                return this.token ? true : false;
+            }
+        };
+
+        var localUser = localStorage.get(USERKEY);
+        if (localUser) {
+            user.username = localUser.username;
+            user.token = localUser.token;
+        }
+
+        return user;
+    };
+
+    var saveUser = function (user, localStorage) {
+        localStorage.add(USERKEY, user);
+    };
+
+    var removeUser = function(localStorage) {
+        localStorage.remove(USERKEY);
+    };
+
+
     var authorization = function () {
 
-        var self = this;
         var url = "/login";
 
-        self.setUrl = function (newUrl) {
+        this.setUrl = function (newUrl) {
             url = newUrl;
         };
 
-        self.$get = function ($http, formEncode, sessionStorage) {
-            var user = {
-                username: "",
-                token: "",
-                get loggedIn() {
-                    return this.token ? true : false;
-                }
-            };
+        this.$get = function ($http, formEncode, localStorage) {
+
+            var user = initializeUser(localStorage);
 
             var processToken = function (username) {
                 return function (response) {
                     user.username = username;
                     user.token = response.data.access_token;
+                    saveUser(user, localStorage);
                     $http.defaults.headers.common["Authorization"] = "Bearer " + user.token;
                     return username;
                 }
@@ -44,9 +68,16 @@
                 return $http.post(url, data, configuration).then(processToken(username));
             };
 
+            var logout = function() {
+                user.username = "";
+                user.token = "";
+                removeUser(localStorage);
+            };
+
             return {
                 user: user,
-                login: login
+                login: login,
+                logout: logout
             };
         }
     };

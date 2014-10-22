@@ -1,4 +1,4 @@
-﻿var HomePage = require("./pages/HomePage");
+﻿var HomePage = require("../pages/HomePage");
 
 describe("The security application", function () {
 

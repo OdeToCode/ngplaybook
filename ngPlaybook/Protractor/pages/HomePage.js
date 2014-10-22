@@ -1,7 +1,7 @@
 ﻿var HomePage = function () {
 
     this.go = function() {
-        browser.get("http://localhost:17648/Apps/security/shell.html#/");
+        browser.get(HomePage.url);
     };
 
     this.login = function (username, password) {
@@ -11,10 +11,12 @@
     };
 
     this.getUsername = function () {
-        var username = element(by.binding("nav.user.username"));
+        var username = element(by.binding("login.user.username"));
         return username.getText();
     };
 
 };
+
+HomePage.url = "http://localhost:17648/Apps/security/shell.html#/";
 
 module.exports = HomePage;

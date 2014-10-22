@@ -1,10 +1,11 @@
 ﻿(function(module) {
 
-    var sessionStorage = function($window) {
+    var localStorage = function($window) {
 
-        var store = $window.sessionStorage;
-        var add = function(key, value) {
-            value = angular.toJSON(value);
+        var store = $window.localStorage;
+
+        var add = function (key, value) {
+            value = angular.toJson(value);
             store.setItem(key, value);
         };
 
@@ -27,6 +28,6 @@
         };
     };
 
-    module.factory("sessionStorage", sessionStorage);
+    module.factory("localStorage", localStorage);
 
 }(angular.module("common")));
