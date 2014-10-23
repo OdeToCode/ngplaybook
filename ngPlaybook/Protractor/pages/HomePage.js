@@ -15,6 +15,10 @@
         return username.getText();
     };
 
+    this.signOut = function() {
+        element(by.buttonText("Sign Out")).click();
+    };
+
 };
 
 HomePage.url = "http://localhost:17648/Apps/security/shell.html#/";

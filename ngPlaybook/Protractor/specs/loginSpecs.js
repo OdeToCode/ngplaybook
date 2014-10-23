@@ -14,4 +14,9 @@ describe("The security application", function () {
         expect(page.getUsername()).toContain("sallen");
     });
 
+    it("should allow the user to sign out", function() {
+        page.signOut();
+        expect(page.getUsername()).toBe("");
+    });
+
 });

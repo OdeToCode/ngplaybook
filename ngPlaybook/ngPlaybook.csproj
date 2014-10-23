@@ -102,11 +102,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps\common\js\directives\alerts.js" />
     <Content Include="Apps\common\js\directives\workSpinner.js" />
-    <Content Include="Apps\common\js\services\authorization.js" />
-    <Content Include="Apps\common\js\services\errors.js" />
+    <Content Include="Apps\common\js\services\authenticate.js" />
+    <Content Include="Apps\common\js\services\currentUser.js" />
+    <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
+    <Content Include="Apps\common\templates\alerts.html" />
     <Content Include="Apps\security\js\services\recipes.js" />
     <Content Include="Apps\common\js\services\requestCounter.js" />
     <Content Include="Apps\common\js\services\localStorage.js" />

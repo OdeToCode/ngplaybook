@@ -9,9 +9,17 @@
             loginUrl = value;
         };
 
-        this.$get = function ($q, $location) {
+        this.$get = function ($q, $location, currentUser) {
 
             return {
+
+                request: function (config) {
+                    if (currentUser.profile.token) {
+                        config.headers.Authorization = "Bearer " + currentUser.profile.token;
+                    }
+                    return $q.when(config);
+                },
+
                 responseError: function (response) {
                     if (response.status == 401) {
                         lastPath = $location.path();

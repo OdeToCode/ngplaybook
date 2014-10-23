@@ -1,22 +1,23 @@
 ﻿(function(module) {
 
-    var loginController = function(authorization, errors, loginRedirect) {
+    var loginController = function(authenticate, currentUser, alerting, loginRedirect) {
         var model = this;
 
         model.username = "";
         model.password = "";
-        model.user = authorization.user;
+        model.user = currentUser.profile;
 
         model.login = function(form) {
             if (form.$valid) {
-                authorization.login(model.username, model.password)
+                authenticate.login(model.username, model.password)
                              .then(loginRedirect.redirectPreLogin)
-                             .catch(errors.catcher("Could not login"));
+                             .catch(alerting.errorHandler("Could not login"));
+                model.password = "";
             }
         }
 
         model.signOut = function() {
-            authorization.logout();
+            authenticate.logout();
         };
     };
 
