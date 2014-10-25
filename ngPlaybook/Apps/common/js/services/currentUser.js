@@ -23,8 +23,8 @@
 
             var localUser = localStorage.get(USERKEY);
             if (localUser) {
-                profile.username = localUser.username;
-                profile.token = localUser.token;
+                user.username = localUser.username;
+                user.token = localUser.token;
             }
             return user;
         }
