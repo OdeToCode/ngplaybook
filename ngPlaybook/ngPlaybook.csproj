@@ -104,7 +104,8 @@
   <ItemGroup>
     <Content Include="Apps\common\js\directives\alerts.js" />
     <Content Include="Apps\common\js\directives\workSpinner.js" />
-    <Content Include="Apps\common\js\services\authenticate.js" />
+    <Content Include="Apps\common\js\services\addToken.js" />
+    <Content Include="Apps\common\js\services\oauth.js" />
     <Content Include="Apps\common\js\services\currentUser.js" />
     <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />

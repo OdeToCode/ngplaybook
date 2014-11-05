@@ -1,6 +1,6 @@
 ﻿(function (module) {
 
-    var authenticate = function () {
+    var oauth = function () {
 
         var url = "/login";
 
@@ -50,7 +50,7 @@
     };
 
     module.config(function ($provide) {
-        $provide.provider("authenticate", authenticate);
+        $provide.provider("oauth", oauth);
     });
 
 }(angular.module("common")));

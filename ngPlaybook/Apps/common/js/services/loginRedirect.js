@@ -9,16 +9,9 @@
             loginUrl = value;
         };
 
-        this.$get = function ($q, $location, currentUser) {
+        this.$get = function ($q, $location) {
 
             return {
-
-                request: function (config) {
-                    if (currentUser.profile.token) {
-                        config.headers.Authorization = "Bearer " + currentUser.profile.token;
-                    }
-                    return $q.when(config);
-                },
 
                 responseError: function (response) {
                     if (response.status == 401) {
@@ -42,8 +35,7 @@
     };
 
     module.provider("loginRedirect", loginRedirect);
-
-    module.config(function ($httpProvider) {
+    module.config(function($httpProvider) {
         $httpProvider.interceptors.push("loginRedirect");
     });
 
