@@ -6,7 +6,7 @@
 
         var request = function(config) {
             requests += 1;
-            return config;
+            return $q.when(config);
         };
 
         var requestError = function(error) {
