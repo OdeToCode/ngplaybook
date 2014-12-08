@@ -1,7 +1,4 @@
-﻿<table class="table table-bordered">
-    <tr ng-repeat="alert in currentAlerts" class="{{alert.type}}">
-        <td>
-           {{ alert.message }}
-        </td>
-    </tr>
-</table>
+﻿<div ng-repeat="alert in currentAlerts" class="alert alert-{{alert.type}}">
+    {{ alert.message }}
+    <div class="close" ng-click="removeAlert(alert)">X</div>
+</div>

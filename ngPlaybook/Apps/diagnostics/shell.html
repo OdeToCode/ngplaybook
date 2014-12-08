@@ -14,9 +14,23 @@
             <img src="/Apps/security/templates/ajax-loader.gif" />
         </div>
         <div class="row">
-            <div class="col-md-8">
-                <div ng-controller="errorProneController as model">
-                    <button ng-click="model.raiseError()"></button>
+            <div class="col-md-8" ng-controller="errorProneController as model">
+                <div>
+                    <h4>Alerts</h4>
+                    <div class="form-group">
+                        <input type="text" ng-model="model.alertMessage" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control"
+                                data-ng-model="model.alertType"
+                                data-ng-options="type for type in model.alertTypes"></select>
+                    </div>
+                    <button class="btn btn-default btn-lg" ng-click="model.createAlert()">Create Alert</button>
+                </div>
+                <hr/>
+                <div>
+                    <h4>Exceptions</h4>
+                    <button ng-click="model.createException()" class="btn btn-default btn-lg">Throw Exception</button>
                 </div>
             </div>
             <div class="col-md-4">
@@ -35,9 +49,10 @@
     <script src="/apps/common/js/directives/alerts.js"></script>
     <script src="/apps/common/js/services/requestCounter.js"></script>
     <script src="/apps/common/js/directives/workSpinner.js"></script>
-    
-    <script src="module.js"></script>
+    <script src="../common/js/services/exceptionHandler.js"></script>
 
-   
+    <script src="module.js"></script>
+    <script src="js/controllers/errorProneController.js"></script>
+
 </body>
 </html>

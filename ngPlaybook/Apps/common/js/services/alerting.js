@@ -19,16 +19,25 @@
             addAlert(alert);
         };
 
+        var addSuccess = function(message) {
+            var alert = { type: "success", message: message };
+            addAlert(alert);
+        };
+
         var addAlert = function(alert) {
             currentAlerts.push(alert);
             $timeout(function() {
-                for (var i = 0; i < currentAlerts.length; i++) {
-                    if (currentAlerts[i] == alert) {
-                        currentAlerts.splice(i, 1);
-                        break;
-                    }
-                }
+                removeAlert(alert);
             }, 10000);
+        };
+
+        var removeAlert = function(alert) {
+            for (var i = 0; i < currentAlerts.length; i++) {
+                if (currentAlerts[i] == alert) {
+                    currentAlerts.splice(i, 1);
+                    break;
+                }
+            }
         };
 
         var errorHandler = function(description) {
@@ -39,10 +48,14 @@
 
 
         return {
+            removeAlert: removeAlert,
+            addAlert: addAlert,
             errorHandler: errorHandler,
             addInformation: addInformation,
             addWarning: addWarning,
-            currentAlerts: currentAlerts
+            currentAlerts: currentAlerts,
+            addSuccess: addSuccess,
+            addDanger: addDanger
         };
 
     };

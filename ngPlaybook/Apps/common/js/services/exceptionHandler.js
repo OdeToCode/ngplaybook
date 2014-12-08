@@ -1,10 +1,11 @@
 ﻿(function(module) {
 
-    module.config(function($decorator) {
-        $decorator.decorate("$exceptionHandler", function($delegate, alerting) {
+    module.config(function($provide) {
+        $provide.decorator("$exceptionHandler", function($delegate, $injector) {
             return function(exception, cause) {
                 $delegate(exception, cause);
-                alerting.addError(exception.message);
+                var alerting = $injector.get("alerting");
+                alerting.addDanger(exception.message);
             };
         });
     });
