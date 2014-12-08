@@ -1,5 +1,5 @@
 ﻿(function() {
 
-    var module = angular.module("common", []);
+    var module = angular.module("common", ["ngAnimate"]);
 
 }());

@@ -1,4 +1,6 @@
-﻿var HomePage = function () {
+﻿var config = require("./config");
+
+var HomePage = function () {
 
     this.go = function() {
         browser.get(HomePage.url);
@@ -21,6 +23,6 @@
 
 };
 
-HomePage.url = "http://localhost:17648/Apps/security/shell.html#/";
+HomePage.url = config.baseUrl + "security/shell.html#/";
 
 module.exports = HomePage;

@@ -1,0 +1,43 @@
+﻿<html ng-app="diagnostics">
+<head>
+    <title>Ode To Food</title>
+    <link href="/styles/css/bootstrap.css" rel="stylesheet" />
+    <link href="/styles/animate.css" rel="stylesheet" />
+    <link href="/styles/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav ng-include="'templates/nav.html'"></nav>
+
+    <div class="container">
+        <div class="work-spinner">
+            <img src="/Apps/security/templates/ajax-loader.gif" />
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div ng-controller="errorProneController as model">
+                    <button ng-click="model.raiseError()"></button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <alerts></alerts>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/angular/angular.js"></script>
+    <script src="/js/angular/angular-route.js"></script>
+    <script src="/js/angular/angular-animate.js"></script>
+    <script src="/js/angular/angular-messages.js"></script>
+
+    <script src="/apps/common/module.js"></script>
+    <script src="/apps/common/js/services/alerting.js"></script>
+    <script src="/apps/common/js/directives/alerts.js"></script>
+    <script src="/apps/common/js/services/requestCounter.js"></script>
+    <script src="/apps/common/js/directives/workSpinner.js"></script>
+    
+    <script src="module.js"></script>
+
+   
+</body>
+</html>

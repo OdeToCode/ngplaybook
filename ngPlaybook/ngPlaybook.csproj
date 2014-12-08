@@ -107,6 +107,7 @@
     <Content Include="Apps\common\js\directives\alerts.js" />
     <Content Include="Apps\common\js\directives\workSpinner.js" />
     <Content Include="Apps\common\js\services\addToken.js" />
+    <Content Include="Apps\common\js\services\exceptionHandler.js" />
     <Content Include="Apps\common\js\services\interpolateDebug.js" />
     <Content Include="Apps\common\js\services\log.js" />
     <Content Include="Apps\common\js\services\oauth.js" />
@@ -115,6 +116,10 @@
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
     <Content Include="Apps\common\templates\alerts.html" />
+    <Content Include="Apps\diagnostics\js\controllers\errorProneController.js" />
+    <Content Include="Apps\diagnostics\module.js" />
+    <Content Include="Apps\diagnostics\shell.html" />
+    <Content Include="Apps\diagnostics\templates\nav.html" />
     <Content Include="Apps\security\js\services\recipes.js" />
     <Content Include="Apps\common\js\services\requestCounter.js" />
     <Content Include="Apps\common\js\services\localStorage.js" />
@@ -136,9 +141,12 @@
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
     <Content Include="packages.config" />
+    <Content Include="Protractor\pages\Config.js" />
+    <Content Include="Protractor\pages\DiagnosticsPage.js" />
     <Content Include="Protractor\pages\HomePage.js" />
     <Content Include="Protractor\pages\LoginPage.js" />
     <Content Include="Protractor\pages\SecretRecipePage.js" />
+    <Content Include="Protractor\specs\diagnosticsSpecs.js" />
     <Content Include="Protractor\specs\loginSpecs.js" />
     <Content Include="Protractor\protractor.conf.js" />
     <Content Include="Protractor\specs\redirectSpecs.js" />
@@ -187,10 +195,7 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apps\admin\temp\" />
-    <Folder Include="Apps\dashboard\temp\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
