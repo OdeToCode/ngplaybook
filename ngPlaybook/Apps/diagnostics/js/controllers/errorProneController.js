@@ -9,8 +9,7 @@
         model.alertType = "";
 
         model.createAlert = function() {
-            var alert = { type: model.alertType, message: model.alertMessage };
-            alerting.addAlert(alert);
+            alerting.addAlert(model.alertType, model.alertMessage);
             model.alertMessage = "";
             model.alertType = "";
         };

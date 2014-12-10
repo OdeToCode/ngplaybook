@@ -5,27 +5,23 @@
         var currentAlerts = [];
         
         var addWarning = function (message) {
-            var alert = { type: "warning", message: message };
-            addAlert(alert);
+            addAlert("warning", message);
         };
 
         var addInformation = function(message) {
-            var alert = { type: "info", message: message };
-            addAlert(alert);
+            addAlert("info", message);
         };
 
         var addDanger = function(message) {
-            var alert = { type: "danger", message: message };
-            addAlert(alert);
+            addAlert("danger", message);
         };
 
         var addSuccess = function(message) {
-            var alert = { type: "success", message: message };
-            addAlert(alert);
+            addAlert("success", message);
         };
 
-        var addAlert = function(alert) {
-            currentAlerts.push(alert);
+        var addAlert = function(type, message) {
+            currentAlerts.push({type: type, message: message});
             $timeout(function() {
                 removeAlert(alert);
             }, 10000);
