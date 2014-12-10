@@ -3,15 +3,14 @@
     var errorProneController = function(alerting) {
         var model = this;
 
-        model.alertTypes = [ "success", "info", "warning", "danger" ];
-
+        model.alertTypes = alerting.alertTypes;
         model.alertMessage = "";
-        model.alertType = "";
+        model.alertType = model.alertTypes[0];
 
         model.createAlert = function() {
             alerting.addAlert(model.alertType, model.alertMessage);
             model.alertMessage = "";
-            model.alertType = "";
+            model.alertType = model.alertTypes[0];
         };
 
         model.createException = function() {

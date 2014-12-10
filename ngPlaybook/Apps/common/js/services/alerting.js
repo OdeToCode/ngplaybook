@@ -3,12 +3,13 @@
     var alerting = function($timeout) {
 
         var currentAlerts = [];
+        var alertTypes = ["info", "warning", "success", "danger"];
         
         var addWarning = function (message) {
             addAlert("warning", message);
         };
 
-        var addInformation = function(message) {
+        var addInfo = function(message) {
             addAlert("info", message);
         };
 
@@ -47,9 +48,10 @@
             removeAlert: removeAlert,
             addAlert: addAlert,
             errorHandler: errorHandler,
-            addInformation: addInformation,
+            addInfo: addInfo,
             addWarning: addWarning,
             currentAlerts: currentAlerts,
+            alertTypes: alertTypes,
             addSuccess: addSuccess,
             addDanger: addDanger
         };
