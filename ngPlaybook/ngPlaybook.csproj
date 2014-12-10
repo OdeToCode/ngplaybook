@@ -133,6 +133,7 @@
     <Content Include="Apps\security\templates\login.html" />
     <Content Include="Apps\security\templates\nav.html" />
     <Content Include="Apps\security\templates\secret.html" />
+    <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="Js\jasmine\boot.js" />
     <Content Include="Js\jasmine\console.js" />
