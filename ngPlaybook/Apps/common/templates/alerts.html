@@ -1,4 +1,6 @@
 ﻿<div ng-repeat="alert in currentAlerts" class="alert alert-{{alert.type}}">
     {{ alert.message }}
-    <div class="close" ng-click="removeAlert(alert)">X</div>
+    <div class="close" ng-click="removeAlert(alert)">
+        <span class="glyphicon glyphicon-remove"></span>
+    </div>
 </div>
