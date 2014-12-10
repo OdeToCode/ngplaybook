@@ -22,7 +22,9 @@
         };
 
         var addAlert = function(type, message) {
-            currentAlerts.push({type: type, message: message});
+            var alert = { type: type, message: message };
+            currentAlerts.push(alert);
+
             $timeout(function() {
                 removeAlert(alert);
             }, 10000);
