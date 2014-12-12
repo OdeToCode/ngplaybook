@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -120,6 +121,7 @@
     <Content Include="Apps\diagnostics\module.js" />
     <Content Include="Apps\diagnostics\shell.html" />
     <Content Include="Apps\diagnostics\templates\nav.html" />
+    <Content Include="Apps\ui\module.js" />
     <Content Include="Apps\security\js\services\recipes.js" />
     <Content Include="Apps\common\js\services\requestCounter.js" />
     <Content Include="Apps\common\js\services\localStorage.js" />
@@ -133,6 +135,9 @@
     <Content Include="Apps\security\templates\login.html" />
     <Content Include="Apps\security\templates\nav.html" />
     <Content Include="Apps\security\templates\secret.html" />
+    <Content Include="Apps\ui\shell.html" />
+    <Content Include="Apps\ui\templates\dashboard.html" />
+    <Content Include="Apps\ui\templates\nav.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="Js\jasmine\boot.js" />
@@ -141,6 +146,7 @@
     <Content Include="Js\jasmine\jasmine.css" />
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
+    <Content Include="Js\ui-router\ui-router.js" />
     <Content Include="packages.config" />
     <Content Include="Protractor\pages\Config.js" />
     <Content Include="Protractor\pages\DiagnosticsPage.js" />
@@ -196,7 +202,9 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Apps\ui\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
