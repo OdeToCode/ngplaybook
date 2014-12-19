@@ -30,7 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -116,6 +116,7 @@
     <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
+    <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
     <Content Include="Apps\common\templates\alerts.html" />
     <Content Include="Apps\diagnostics\js\controllers\errorProneController.js" />
     <Content Include="Apps\diagnostics\module.js" />
@@ -136,6 +137,11 @@
     <Content Include="Apps\security\templates\nav.html" />
     <Content Include="Apps\security\templates\secret.html" />
     <Content Include="Apps\ui\shell.html" />
+    <Content Include="Apps\ui\templates\admin.html" />
+    <Content Include="Apps\ui\templates\costs.html" />
+    <Content Include="Apps\ui\templates\injuries.html" />
+    <Content Include="Apps\ui\templates\inventory.html" />
+    <Content Include="Apps\ui\templates\overall.html" />
     <Content Include="Apps\ui\templates\dashboard.html" />
     <Content Include="Apps\ui\templates\nav.html" />
     <Content Include="default.html" />
@@ -202,9 +208,7 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apps\ui\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
