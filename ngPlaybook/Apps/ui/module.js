@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var module = angular.module("ui", ["common", "ui.router", "googlechart"]);
+    var module = angular.module("ui", ["common", "ngAnimate", "ui.router", "googlechart"]);
 
     module.config(function ($stateProvider, $urlRouterProvider) {
 

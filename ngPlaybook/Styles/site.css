@@ -3,24 +3,24 @@
 }
 
 .ng-move {
-    -webkit-animation: pulse 0.3s;
-    -moz-animation: pulse 0.3s;
-    -o-animation: pulse 0.3s;
-    animation: pulse 0.3s;
+    -webkit-animation: pulse 0.5s;
+    -moz-animation: pulse 0.5s;
+    -o-animation: pulse 0.5s;
+    animation: pulse 0.5s;
 }
 
 .ng-enter {
-    -webkit-animation: fadeIn 0.7s;
-    -moz-animation: fadeIn 0.7s;
-    -o-animation: fadeIn 0.7s;
-    animation: fadeIn 0.7s;
+    -webkit-animation: zoomIn 0.5s;
+    -moz-animation: zoomIn 0.5s;
+    -o-animation: zoomIn 0.5s;
+    animation: zoomIn 0.5s;
 }
 
 .ng-hide-add {
-    -webkit-animation: fadeOut 0.7s;
-    -moz-animation: fadeOut 0.7s;
-    -o-animation: fadeOut 0.7s;
-    animation: fadeOut 0.7s;
+    -webkit-animation: fadeOut 0.9s;
+    -moz-animation: fadeOut 0.9s;
+    -o-animation: fadeOut 0.9s;
+    animation: fadeOut 0.9s;
     display: block !important;
 }
 

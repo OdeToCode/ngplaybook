@@ -43,7 +43,7 @@
         $timeout(function() {
             self.showChart = true;
             addData(self.chart);
-        }, 1000);
+        }, 750);
     };
 
     module.controller("overallController", overallController);
