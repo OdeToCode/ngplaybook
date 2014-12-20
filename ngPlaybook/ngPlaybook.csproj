@@ -146,6 +146,7 @@
     <Content Include="Apps\ui\templates\nav.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
+    <Content Include="Js\google-chart\google-chart.js" />
     <Content Include="Js\jasmine\boot.js" />
     <Content Include="Js\jasmine\console.js" />
     <Content Include="Js\jasmine\jasmine-html.js" />
@@ -208,7 +209,10 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Apps\ui\js\controllers\" />
+    <Folder Include="Apps\ui\js\directives\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

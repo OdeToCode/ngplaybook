@@ -14,3 +14,4 @@
             .state("admin", { url: "/admin", templateUrl: "templates/admin.html" });
     });
 }());
+
