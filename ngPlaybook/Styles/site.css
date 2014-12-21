@@ -38,3 +38,7 @@
     left: 45%;
     top: 65px;
 }
+
+table > tbody > tr {
+    border-top: 1px solid black;
+}

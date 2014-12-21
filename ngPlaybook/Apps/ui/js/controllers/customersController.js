@@ -1,5 +1,4 @@
-﻿
-(function (module) {
+﻿(function (module) {
 
     var customersController = function ($timeout) {
         var self = this;

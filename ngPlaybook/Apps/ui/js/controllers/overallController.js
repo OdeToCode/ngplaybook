@@ -6,10 +6,10 @@
 
         chart.data = [
             ["Label", "Value"],
-            ["Staffing", 0],
-            ["Throughput", 0],
-            ["Satisfaction", 0],
-            ["Freshness", 0],
+            ["Turnover", 0],
+            ["Fire Risk", 0],
+            ["Complaints", 0],
+            ["Staleness", 0],
             ["Advertising", 0],
             ["Returns", 0],
             ["Accidents", 0],

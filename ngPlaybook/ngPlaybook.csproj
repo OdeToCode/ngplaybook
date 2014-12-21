@@ -116,10 +116,13 @@
     <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
+    <Content Include="Apps\ui\js\controllers\adminController.js" />
+    <Content Include="Apps\ui\js\controllers\costController.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />
     <Content Include="Apps\ui\js\controllers\injuriesController.js" />
     <Content Include="Apps\ui\js\controllers\overallController.js" />
     <Content Include="Apps\ui\js\directives\calendar.js" />
+    <Content Include="Apps\ui\js\services\employee.js" />
     <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
     <Content Include="Apps\common\templates\alerts.html" />
     <Content Include="Apps\diagnostics\js\controllers\errorProneController.js" />
@@ -157,6 +160,7 @@
     <Content Include="Js\jasmine\jasmine.css" />
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
+    <Content Include="Js\ui-bootstrap\ui-bootstrap-tpls-0.12.0.js" />
     <Content Include="Js\ui-router\ui-router.js" />
     <Content Include="packages.config" />
     <Content Include="Protractor\pages\Config.js" />
