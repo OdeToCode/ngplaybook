@@ -117,6 +117,7 @@
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />
+    <Content Include="Apps\ui\js\controllers\injuriesController.js" />
     <Content Include="Apps\ui\js\controllers\overallController.js" />
     <Content Include="Apps\ui\js\directives\calendar.js" />
     <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
