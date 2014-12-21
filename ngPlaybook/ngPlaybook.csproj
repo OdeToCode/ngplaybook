@@ -122,8 +122,9 @@
     <Content Include="Apps\ui\js\controllers\injuriesController.js" />
     <Content Include="Apps\ui\js\controllers\overallController.js" />
     <Content Include="Apps\ui\js\directives\calendar.js" />
+    <Content Include="Apps\ui\js\directives\rating.js" />
     <Content Include="Apps\ui\js\services\employee.js" />
-    <Content Include="Apps\ui\js\services\promotionalModal.js" />
+    <Content Include="Apps\ui\js\services\confirmPromotion.js" />
     <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
     <Content Include="Apps\common\templates\alerts.html" />
     <Content Include="Apps\diagnostics\js\controllers\errorProneController.js" />
