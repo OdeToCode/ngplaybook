@@ -122,6 +122,7 @@
     <Content Include="Apps\ui\js\controllers\injuriesController.js" />
     <Content Include="Apps\ui\js\controllers\overallController.js" />
     <Content Include="Apps\ui\js\directives\calendar.js" />
+    <Content Include="Apps\ui\js\directives\rating2.js" />
     <Content Include="Apps\ui\js\directives\rating.js" />
     <Content Include="Apps\ui\js\services\employee.js" />
     <Content Include="Apps\ui\js\services\confirmPromotion.js" />
@@ -154,6 +155,7 @@
     <Content Include="Apps\ui\templates\overall.html" />
     <Content Include="Apps\ui\templates\dashboard.html" />
     <Content Include="Apps\ui\templates\nav.html" />
+    <Content Include="Apps\ui\templates\rating2.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="Js\google-chart\google-chart.js" />

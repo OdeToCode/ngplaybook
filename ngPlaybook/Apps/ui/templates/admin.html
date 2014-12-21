@@ -13,7 +13,7 @@
             <tr ng-repeat="employee in model.employees">
                 <td>{{employee.firstName}}</td>
                 <td>{{employee.lastName}}</td>
-                <td><div otf-rating value="employee.rating" min="1" max="5"></div></td>
+                <td><div otf-rating2 value="employee.rating" min="1" max="5"></div></td>
                 <td><button class="btn btn-xs btn-danger" ng-click="model.promote(employee)">Promote</button></td>
             </tr>
         </tbody>
