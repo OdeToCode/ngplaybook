@@ -123,6 +123,7 @@
     <Content Include="Apps\ui\js\controllers\overallController.js" />
     <Content Include="Apps\ui\js\directives\calendar.js" />
     <Content Include="Apps\ui\js\services\employee.js" />
+    <Content Include="Apps\ui\js\services\promotionalModal.js" />
     <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
     <Content Include="Apps\common\templates\alerts.html" />
     <Content Include="Apps\diagnostics\js\controllers\errorProneController.js" />
@@ -145,6 +146,7 @@
     <Content Include="Apps\security\templates\secret.html" />
     <Content Include="Apps\ui\shell.html" />
     <Content Include="Apps\ui\templates\admin.html" />
+    <Content Include="Apps\ui\templates\confirmPromotion.html" />
     <Content Include="Apps\ui\templates\costs.html" />
     <Content Include="Apps\ui\templates\injuries.html" />
     <Content Include="Apps\ui\templates\customers.html" />
