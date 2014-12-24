@@ -165,7 +165,7 @@
     <Content Include="Js\jasmine\jasmine.css" />
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
-    <Content Include="Js\ui-bootstrap\ui-bootstrap-tpls-0.12.0.js" />
+    <Content Include="Js\ui-bootstrap\ui-bootstrap-tpls.js" />
     <Content Include="Js\ui-router\ui-router.js" />
     <Content Include="packages.config" />
     <Content Include="Protractor\pages\Config.js" />
