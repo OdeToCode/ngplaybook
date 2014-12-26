@@ -4,15 +4,10 @@
         return function (employee) {
             var options = {
                 templateUrl: "templates/confirmPromotion.html",
-                controller: function($scope, employee) {
+                controller: function($scope) {
                     this.employee = employee;
                 },  
-                controllerAs: "model",
-                resolve: {
-                    employee: function() {
-                        return employee;
-                    }
-                }
+                controllerAs: "model"
             };
 
             return $modal.open(options).result;
