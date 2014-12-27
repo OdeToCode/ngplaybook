@@ -4,7 +4,7 @@
         return function (employee) {
             var options = {
                 templateUrl: "templates/confirmPromotion.html",
-                controller: function($scope) {
+                controller: function() {
                     this.employee = employee;
                 },  
                 controllerAs: "model"
