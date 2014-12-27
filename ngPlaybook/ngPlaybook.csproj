@@ -116,6 +116,9 @@
     <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
+    <Content Include="Apps\forms\module.js" />
+    <Content Include="Apps\forms\shell.html" />
+    <Content Include="Apps\forms\templates\home.html" />
     <Content Include="Apps\ui\js\controllers\adminController.js" />
     <Content Include="Apps\ui\js\controllers\costController.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />
@@ -222,7 +225,10 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Apps\forms\js\controllers\" />
+    <Folder Include="Apps\forms\js\services\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

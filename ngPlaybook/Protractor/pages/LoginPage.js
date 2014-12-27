@@ -7,9 +7,9 @@ var LoginPage = function () {
     };
 
     this.login = function(username, password) {
-        element(by.css(".container [name=username]")).sendKeys(username);
-        element(by.css(".container [name=password]")).sendKeys(password);
-        element(by.css(".container [name=loginForm]")).submit();
+        $(".container [name=username]").sendKeys(username);
+        $(".container [name=password]").sendKeys(password);
+        $(".container [name=loginForm]").submit();
     };
 
 };
