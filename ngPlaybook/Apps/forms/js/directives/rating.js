@@ -1,7 +1,7 @@
 ﻿
 (function (module) {
 
-    var otfRating2Controller = function($scope) {
+    var otfRatingController = function($scope) {
 
         this.setRange = function(min, max) {
             $scope.stars = new Array(max - min + 1);
@@ -29,15 +29,15 @@
         };
     };
 
-    var otfRating2 = function () {
+    var otfRating = function () {
 
         return {
-            require: "otfRating2",
+            require: "otfRating",
             scope: {
                 value: "="
             },
-            templateUrl: "templates/rating2.html",
-            controller: "otfRating2Controller",
+            templateUrl: "templates/rating.html",
+            controller: "otfRatingController",
             link: function (scope, element, attributes, controller) {
                 var min = parseInt(attributes.min || "1");
                 var max = parseInt(attributes.max || "10");
@@ -46,7 +46,7 @@
         };
     };
 
-    module.controller("otfRating2Controller", otfRating2Controller);
-    module.directive("otfRating2", otfRating2);
+    module.controller("otfRatingController", otfRatingController);
+    module.directive("otfRating", otfRating);
 
 }(angular.module("ui")));

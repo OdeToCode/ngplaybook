@@ -1,13 +1,10 @@
-﻿
-(function () {
+﻿(function () {
 
     var app = angular.module("forms", ["common", "ngRoute", "ngAnimate", "ngMessages"]);
 
     var routes = [
-        {
-            url: "/",
-            settings: { templateUrl: "templates/home.html" }
-        }
+        { url: "/", settings: { templateUrl: "templates/home.html" } },
+        { url: "/results", settings: {templateUrl: "templates/results.html"}}
     ];
 
     var registerRoutes = function($routeProvider) {

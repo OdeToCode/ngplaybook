@@ -116,16 +116,22 @@
     <Content Include="Apps\common\js\services\alerting.js" />
     <Content Include="Apps\common\js\services\formEncode.js" />
     <Content Include="Apps\common\js\services\loginRedirect.js" />
+    <Content Include="Apps\forms\js\controllers\editProfileController.js" />
+    <Content Include="Apps\forms\js\controllers\resultController.js" />
+    <Content Include="Apps\forms\js\directives\formGroup.js" />
+    <Content Include="Apps\forms\js\services\user.js" />
     <Content Include="Apps\forms\module.js" />
     <Content Include="Apps\forms\shell.html" />
     <Content Include="Apps\forms\templates\home.html" />
+    <Content Include="Apps\forms\templates\messages.html" />
     <Content Include="Apps\forms\templates\nav.html" />
+    <Content Include="Apps\forms\templates\results.html" />
     <Content Include="Apps\ui\js\controllers\adminController.js" />
     <Content Include="Apps\ui\js\controllers\costController.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />
     <Content Include="Apps\ui\js\controllers\injuriesController.js" />
     <Content Include="Apps\ui\js\controllers\overallController.js" />
-    <Content Include="Apps\forms\js\directives\rating2.js" />
+    <Content Include="Apps\forms\js\directives\rating.js" />
     <Content Include="Apps\ui\js\services\employee.js" />
     <Content Include="Apps\ui\js\services\confirmPromotion.js" />
     <Content Include="Apps\ui\js\services\stateChangeErrors.js" />
@@ -157,7 +163,7 @@
     <Content Include="Apps\ui\templates\overall.html" />
     <Content Include="Apps\ui\templates\dashboard.html" />
     <Content Include="Apps\ui\templates\nav.html" />
-    <Content Include="Apps\forms\templates\rating2.html" />
+    <Content Include="Apps\forms\templates\rating.html" />
     <Content Include="default.html" />
     <Content Include="Global.asax" />
     <Content Include="Js\google-chart\google-chart.js" />
@@ -224,10 +230,7 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apps\forms\js\controllers\" />
-    <Folder Include="Apps\forms\js\services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

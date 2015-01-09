@@ -53,3 +53,7 @@ table > tbody > tr {
 .starpreview {
     color: rgba(255, 255, 128, 128);
 }
+
+pre {
+    font-size: smaller;
+}
