@@ -22,6 +22,11 @@
                 </div>
 
                 <div forminput>
+                    <label for="rating">Your rating:</label>
+                    <otf-rating id="rating" name="rating" ng-model="model.user.rating"></otf-rating>
+                </div>
+
+                <div forminput>
                     <label for="phone">Your phone number:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" ng-model="model.user.phone">
                     <span class="help-block"></span>

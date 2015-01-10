@@ -13,7 +13,8 @@
             cuisine: "",
             bio: "",
             terms: "",
-            status: ""
+            status: "",
+            rating: 1
         };
     };
 
