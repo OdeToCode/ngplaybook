@@ -12,8 +12,7 @@
             color: "",
             cuisine: "",
             bio: "",
-            promotions: "",
-            snailMail: "",
+            terms: "",
             status: ""
         };
     };

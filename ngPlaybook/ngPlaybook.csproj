@@ -118,7 +118,7 @@
     <Content Include="Apps\common\js\services\loginRedirect.js" />
     <Content Include="Apps\forms\js\controllers\editProfileController.js" />
     <Content Include="Apps\forms\js\controllers\resultController.js" />
-    <Content Include="Apps\forms\js\directives\formGroup.js" />
+    <Content Include="Apps\forms\js\directives\forminput.js" />
     <Content Include="Apps\forms\js\services\user.js" />
     <Content Include="Apps\forms\module.js" />
     <Content Include="Apps\forms\shell.html" />

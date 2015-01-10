@@ -5,62 +5,55 @@
 
                 <h2>Sign Up Now!</h2>
 
-                <div class="form-group has-error">
-                    <label for="name" class="control-label">Your name:</label>
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="Name" ng-model="model.user.name">
-                    <div class="help-block"
-                         ng-messages="profileForm.name.$error"
-                         ng-messages-include="templates/messages.html">
-                    </div>
+                <div forminput>
+                    <label for="name">Your name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Name" ng-model="model.user.name">
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="email">Your email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="Email address" ng-model="model.user.email">
-                    <div class="help-block">
-                        A valid email address is required!
-                    </div>
+                    <input type="email" id="email" name="email" required placeholder="Email address" ng-model="model.user.email">                 
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="website">Your website:</label>
-                    <input type="url" class="form-control" id="website" name="website" placeholder="Website" ng-model="model.user.website">
+                    <input type="url" id="website" name="website" placeholder="Website" ng-model="model.user.website">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="phone">Your phone number:</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="model.user.phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" ng-model="model.user.phone">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="dob">Birthdate:</label>
-                    <input type="date" class="form-control" id="dob" name="dob" ng-model="model.user.birthdate">
+                    <input type="date" id="dob" name="dob" ng-model="model.user.birthdate">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="age">Age:</label>
-                    <input type="number" class="form-control" id="age" name="age" placeholder="Age" min="1" max="110" ng-model="model.user.age">
+                    <input type="number" id="age" name="age" placeholder="Age" min="1" max="110" ng-model="model.user.age">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="old">How old do you feel?</label>
-                    <input type="range" class="form-control" id="old" name="old" min="1" max="110" ng-model="model.user.feelLike">
+                    <input type="range" id="old" name="old" min="1" max="110" ng-model="model.user.feelLike">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="color">Favorite color:</label>
-                    <input type="color" class="form-control" id="color" name="color" ng-model="model.user.color">
+                    <input type="color" id="color" name="color" ng-model="model.user.color">
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="cuisine">Favorite cuisine?</label>
-                    <select name="cuisine" id="cuisine" class="form-control" ng-model="model.user.cuisine">
+                    <select name="cuisine" id="cuisine" ng-model="model.user.cuisine">
                         <option></option>
                         <option>Indian</option>
                         <option>German</option>
@@ -70,46 +63,37 @@
                     <span class="help-block"></span>
                 </div>
 
-                <div class="form-group">
+                <div forminput>
                     <label for="bio">A few words about yourself:</label>
-                    <textarea class="form-control" ng-model="model.user.bio"></textarea>
+                    <textarea id="bio" name="bio" ng-model="model.user.bio"></textarea>
                 </div>
 
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="sendemail" value="true" ng-model="model.user.promotion">
-                            Please send me promotional email.
-                        </label>
-                    </div>
-                </div>
-
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="sendmail" value="true" ng-model="model.user.snailMail">
-                        Please send me real mail, too.
-                    </label>
-                </div>
-
-                <div class="form-group">
+                <div forminput>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="status" value="student" ng-model="model.user.status">
+                            <input type="radio" name="status" value="student" ng-model="model.user.status" required>
                             I am a student
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="status" value="professional" ng-model="model.user.status">
+                            <input type="radio" name="status" value="professional" ng-model="model.user.status" required>
                             I am a professional
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="status" value="prostudent" ng-model="model.user.status">
+                            <input type="radio" name="status" value="prostudent" ng-model="model.user.status" required>
                             I am a professional student
                         </label>
                     </div>
+                </div>
+
+                <div forminput class="checkbox">
+                    <label>
+                        <input type="checkbox" name="terms" value="true" ng-model="model.user.terms" required>
+                        I accept the terms, whatever they may be. 
+                    </label>
                 </div>
 
                 <input class="btn btn-lg btn-primary" type="submit" value="Submit" />
