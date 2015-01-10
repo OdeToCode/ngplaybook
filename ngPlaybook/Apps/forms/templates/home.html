@@ -6,8 +6,9 @@
                 <h2>Sign Up Now!</h2>
 
                 <div forminput>
-                    <label for="name">Your name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Name" ng-model="model.user.name">
+                    <label for="username">Your user name:</label>
+                    <input type="text" id="username" name="username" required placeholder="User name"
+                           ng-model="model.user.username" username starts-with="S">
                 </div>
 
                 <div forminput>
@@ -18,7 +19,6 @@
                 <div forminput>
                     <label for="website">Your website:</label>
                     <input type="url" id="website" name="website" placeholder="Website" ng-model="model.user.website">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
@@ -29,31 +29,26 @@
                 <div forminput>
                     <label for="phone">Your phone number:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Phone" ng-model="model.user.phone">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
                     <label for="dob">Birthdate:</label>
                     <input type="date" id="dob" name="dob" ng-model="model.user.birthdate">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
                     <label for="age">Age:</label>
                     <input type="number" id="age" name="age" placeholder="Age" min="1" max="110" ng-model="model.user.age">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
                     <label for="old">How old do you feel?</label>
                     <input type="range" id="old" name="old" min="1" max="110" ng-model="model.user.feelLike">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
                     <label for="color">Favorite color:</label>
                     <input type="color" id="color" name="color" ng-model="model.user.color">
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>
@@ -65,7 +60,6 @@
                         <option>Mexican</option>
                         <option>Thai</option>
                     </select>
-                    <span class="help-block"></span>
                 </div>
 
                 <div forminput>

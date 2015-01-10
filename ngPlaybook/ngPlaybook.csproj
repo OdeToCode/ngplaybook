@@ -119,6 +119,8 @@
     <Content Include="Apps\forms\js\controllers\editProfileController.js" />
     <Content Include="Apps\forms\js\controllers\resultController.js" />
     <Content Include="Apps\forms\js\directives\forminput.js" />
+    <Content Include="Apps\forms\js\directives\startsWith.js" />
+    <Content Include="Apps\forms\js\directives\username.js" />
     <Content Include="Apps\forms\js\services\user.js" />
     <Content Include="Apps\forms\module.js" />
     <Content Include="Apps\forms\shell.html" />
@@ -220,6 +222,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\Api\NameValidationController.cs" />
     <Compile Include="Server\Api\SecretController.cs" />
     <Compile Include="Server\Auth\OdeToFoodJwtOptions.cs" />
     <Compile Include="Server\Auth\OdeToFoodJwtWriterFormat.cs" />

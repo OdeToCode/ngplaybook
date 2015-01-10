@@ -2,7 +2,7 @@
 
     var user = function () {
         return {
-            name: "",
+            username: "",
             email: "",
             website: "",
             phone: "",
