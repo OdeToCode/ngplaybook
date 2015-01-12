@@ -13,7 +13,7 @@ namespace NgPlaybook.Server.Auth
 
             TokenEndpointPath = new PathString(config.TokenPath);
             AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(config.ExpirationMinutes);
-            AccessTokenFormat = new OdeToFoodJwtWriterFormat();
+            AccessTokenFormat = new OdeToFoodJwtWriterFormat(this);
             Provider = new OdeToFoodOAuthProvider();
             #if DEBUG
                 AllowInsecureHttp = true;

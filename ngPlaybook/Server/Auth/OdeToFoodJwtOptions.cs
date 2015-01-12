@@ -5,12 +5,12 @@ namespace NgPlaybook.Server.Auth
 {
     public class OdeToFoodJwtOptions : JwtBearerAuthenticationOptions
     {
-        public OdeToFoodJwtOptions()
+        public OdeToFoodJwtOptions() 
         {
             var config = AppConfiguration.Config;
           
-            AllowedAudiences = new[] { config.JwtAudience };
-            IssuerSecurityTokenProviders = new[]
+            AllowedAudiences = new[] { config.JwtAudience };            
+            IssuerSecurityTokenProviders = new[] 
             {
                 new SymmetricKeyIssuerSecurityTokenProvider(config.JwtIssuer, config.JwtKey)
             };

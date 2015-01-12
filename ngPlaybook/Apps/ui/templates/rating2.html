@@ -1,0 +1,8 @@
+﻿<div ng-click="increaseRating" class="stars">
+    <span ng-repeat="star in stars track by $index"
+          ng-class="styles($index)"
+          ng-mouseover="mouseover($index)"
+          ng-mouseout="mouseout($index)"
+          ng-click="click($index)">
+    </span>
+</div>

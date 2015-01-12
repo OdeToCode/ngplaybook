@@ -4,7 +4,7 @@
 
         var processResponse = function (response) {
             if (response.data) {
-                return true;
+                return $q.when(true);
             } else {
                 return $q.reject(false);
             }
