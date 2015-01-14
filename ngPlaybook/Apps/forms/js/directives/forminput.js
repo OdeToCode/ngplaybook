@@ -24,7 +24,7 @@
         var input = element[0].querySelector("input, textarea, select, otf-rating");
         var type = input.getAttribute("type");
         var name = input.getAttribute("name");
-        if (type && type !== "checkbox" && type !== "radio") {
+        if (type !== "checkbox" && type !== "radio") {
             input.classList.add("form-control");
         }
 
