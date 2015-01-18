@@ -128,6 +128,9 @@
     <Content Include="Apps\forms\templates\messages.html" />
     <Content Include="Apps\forms\templates\nav.html" />
     <Content Include="Apps\forms\templates\results.html" />
+    <Content Include="Apps\integration\module.js" />
+    <Content Include="Apps\integration\shell.html" />
+    <Content Include="Apps\integration\templates\nav.html" />
     <Content Include="Apps\ui\js\controllers\adminController.js" />
     <Content Include="Apps\ui\js\controllers\costController.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />
@@ -238,7 +241,9 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Apps\integration\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
