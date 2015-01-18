@@ -16,6 +16,8 @@
         <alerts></alerts>
 
         <div ng-controller="movingObjectController as objects">
+            <button class="btn btn-sm" ng-click="objects.kick()">Kick</button>
+            <button class="btn btn-sm" ng-click="objects.grow()">Grow</button>
             <physics-canvas width="500" height="500">
 
                 <physics-body type="rectangle" body="objects.box1"
@@ -38,6 +40,8 @@
     </div>
 
     <script src="/Js/jquery/jquery-2.1.3.js"></script>
+    <script src="/Js/jquery.knob/jquery.knob.js"></script>
+    <script src="/Js/tubular/tubular.js"></script>
     <script src="/Js/physicsjs/physicsjs-full.js"></script>
     <script src="/js/angular/angular.js"></script>
     <script src="/js/angular/angular-route.js"></script>
