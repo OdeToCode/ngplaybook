@@ -13,16 +13,32 @@
         <div class="work-spinner">
             <img src="/Apps/security/templates/ajax-loader.gif" />
         </div>
-        <div class="row">
-            <div class="col-md-8">
-                
-            </div>
-            <div class="col-md-4">
-                <alerts></alerts>
-            </div>
+        <alerts></alerts>
+
+        <div ng-controller="movingObjectController as objects">
+            <physics-canvas width="500" height="500">
+
+                <physics-body type="rectangle" body="objects.box1"
+                              options="{x:450, y:10, vy:-0.3, width:5, height:5}">
+                </physics-body>
+
+                <physics-body type="rectangle" body="objects.box2"
+                              options="{x:250, y:210, vy:-0.3, width:5, height:5}">
+                </physics-body>
+
+                <physics-edge-detection min-x="0" min-y="0" max-x="500" max-y="500" restitution="0.3">
+                </physics-edge-detection>
+
+                <physics-behavior name="constant-acceleration"></physics-behavior>
+                <physics-behavior name="body-impulse-response"></physics-behavior>
+                <physics-behavior name="body-collision-detection"></physics-behavior>
+                <physics-behavior name="sweep-prune"></physics-behavior>
+            </physics-canvas>
         </div>
     </div>
 
+    <script src="/Js/jquery/jquery-2.1.3.js"></script>
+    <script src="/Js/physicsjs/physicsjs-full.js"></script>
     <script src="/js/angular/angular.js"></script>
     <script src="/js/angular/angular-route.js"></script>
     <script src="/js/angular/angular-animate.js"></script>
@@ -35,6 +51,14 @@
     <script src="/apps/common/js/directives/workSpinner.js"></script>
 
     <script src="module.js"></script>
+    <script src="js/services/physics.js"></script>
+    <script src="js/services/world.js"></script>
+    <script src="js/services/ticker.js"></script>
+    <script src="js/directives/physicsCanvas.js"></script>
+    <script src="js/directives/phsicsEdgeDetection.js"></script>
+    <script src="js/directives/physicsBehavior.js"></script>
+    <script src="js/directives/physicsBody.js"></script>
+    <script src="js/controllers/movingObjects.js"></script>
 
 </body>
 </html>

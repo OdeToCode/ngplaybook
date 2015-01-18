@@ -128,6 +128,14 @@
     <Content Include="Apps\forms\templates\messages.html" />
     <Content Include="Apps\forms\templates\nav.html" />
     <Content Include="Apps\forms\templates\results.html" />
+    <Content Include="Apps\integration\js\controllers\movingObjects.js" />
+    <Content Include="Apps\integration\js\directives\phsicsEdgeDetection.js" />
+    <Content Include="Apps\integration\js\directives\physicsBehavior.js" />
+    <Content Include="Apps\integration\js\directives\physicsBody.js" />
+    <Content Include="Apps\integration\js\directives\physicsCanvas.js" />
+    <Content Include="Apps\integration\js\services\physics.js" />
+    <Content Include="Apps\integration\js\services\ticker.js" />
+    <Content Include="Apps\integration\js\services\world.js" />
     <Content Include="Apps\integration\module.js" />
     <Content Include="Apps\integration\shell.html" />
     <Content Include="Apps\integration\templates\nav.html" />
@@ -183,6 +191,8 @@
     <Content Include="Js\jasmine\jasmine.css" />
     <Content Include="Js\jasmine\jasmine.js" />
     <Content Include="Js\jasmine\jasmine_favicon.png" />
+    <Content Include="Js\jquery\jquery-2.1.3.js" />
+    <Content Include="Js\physicsjs\physicsjs-full.js" />
     <Content Include="Js\ui-bootstrap\ui-bootstrap-tpls.js" />
     <Content Include="Js\ui-router\ui-router.js" />
     <Content Include="packages.config" />
@@ -241,9 +251,7 @@
     <Compile Include="Server\Startup\OwinStartup.cs" />
     <Compile Include="Server\Startup\WebApiStartup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Apps\integration\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
