@@ -129,10 +129,12 @@
     <Content Include="Apps\forms\templates\nav.html" />
     <Content Include="Apps\forms\templates\results.html" />
     <Content Include="Apps\integration\js\controllers\movingObjects.js" />
+    <Content Include="Apps\integration\js\directives\knob.js" />
     <Content Include="Apps\integration\js\directives\phsicsEdgeDetection.js" />
     <Content Include="Apps\integration\js\directives\physicsBehavior.js" />
     <Content Include="Apps\integration\js\directives\physicsBody.js" />
     <Content Include="Apps\integration\js\directives\physicsCanvas.js" />
+    <Content Include="Apps\integration\js\directives\tubular.js" />
     <Content Include="Apps\integration\js\services\physics.js" />
     <Content Include="Apps\integration\js\services\ticker.js" />
     <Content Include="Apps\integration\js\services\world.js" />
@@ -193,6 +195,7 @@
     <Content Include="Js\jasmine\jasmine_favicon.png" />
     <Content Include="Js\jquery\jquery-2.1.3.js" />
     <Content Include="Js\physicsjs\physicsjs-full.js" />
+    <Content Include="Js\tubular\tubular.js" />
     <Content Include="Js\ui-bootstrap\ui-bootstrap-tpls.js" />
     <Content Include="Js\ui-router\ui-router.js" />
     <Content Include="packages.config" />
@@ -210,6 +213,7 @@
     <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Styles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Js\jquery.knob\jquery.knob.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

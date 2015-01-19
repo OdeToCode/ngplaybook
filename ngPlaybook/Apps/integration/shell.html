@@ -13,29 +13,41 @@
         <div class="work-spinner">
             <img src="/Apps/security/templates/ajax-loader.gif" />
         </div>
-        <alerts></alerts>
+        <div class="row" ng-controller="movingObjectController as objects">
+            <div class="col-md-8">
+                <physics-canvas width="600" height="400">
 
-        <div ng-controller="movingObjectController as objects">
-            <button class="btn btn-sm" ng-click="objects.kick()">Kick</button>
-            <button class="btn btn-sm" ng-click="objects.grow()">Grow</button>
-            <physics-canvas width="500" height="500">
+                    <physics-body type="rectangle" body="objects.box1"
+                                  options="{x:450, y:10, vy:-0.3, width:15, height:15}">
+                    </physics-body>
 
-                <physics-body type="rectangle" body="objects.box1"
-                              options="{x:450, y:10, vy:-0.3, width:5, height:5}">
-                </physics-body>
+                    <physics-body type="rectangle" body="objects.box2"
+                                  options="{x:250, y:210, vy:-0.3, width:15, height:15}">
+                    </physics-body>
 
-                <physics-body type="rectangle" body="objects.box2"
-                              options="{x:250, y:210, vy:-0.3, width:5, height:5}">
-                </physics-body>
+                    <physics-edge-detection min-x="0" min-y="0" max-x="600" max-y="400" restitution="0.3">
+                    </physics-edge-detection>
 
-                <physics-edge-detection min-x="0" min-y="0" max-x="500" max-y="500" restitution="0.3">
-                </physics-edge-detection>
+                    <physics-behavior name="constant-acceleration"></physics-behavior>
+                    <physics-behavior name="body-impulse-response"></physics-behavior>
+                    <physics-behavior name="body-collision-detection"></physics-behavior>
+                    <physics-behavior name="sweep-prune"></physics-behavior>
+                </physics-canvas>
 
-                <physics-behavior name="constant-acceleration"></physics-behavior>
-                <physics-behavior name="body-impulse-response"></physics-behavior>
-                <physics-behavior name="body-collision-detection"></physics-behavior>
-                <physics-behavior name="sweep-prune"></physics-behavior>
-            </physics-canvas>
+            </div>
+            <div class="col-md-4">
+                <alerts></alerts>
+                <ul class="list-unstyled">
+                    <li>
+                        <button class="btn btn-lg btn-primary" ng-click="objects.kick()">Kick</button>
+                    </li>
+                    <li>
+                        <input type="number" knob
+                               min="1" max="100" width="75"
+                               change="objects.resize(value)" value="50">
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -63,6 +75,15 @@
     <script src="js/directives/physicsBehavior.js"></script>
     <script src="js/directives/physicsBody.js"></script>
     <script src="js/controllers/movingObjects.js"></script>
+    <script src="js/directives/tubular.js"></script>
+    <script src="js/directives/knob.js"></script>
+    <script>
+
+        //$(function () {
+        //    $(".dial").knob();
+        //});
+
+    </script>
 
 </body>
 </html>

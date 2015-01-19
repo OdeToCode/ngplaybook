@@ -7,16 +7,17 @@
         model.box2 = null;
 
         model.kick = function () {
-            model.box1.applyForce({ x: 0.1, y: -0.2 });
-            model.box2.applyForce({ x: -0.1, y: -0.2 });
+            model.box1.applyForce({ x: 0.1, y: -0.1 });
+            model.box2.applyForce({ x: -0.1, y: -0.1 });
         };
 
-        model.grow = function () {
-            model.box1.geometry.width *= 1.5;
-            model.box1.geometry.height *= 1.5;
-            model.box1.mass *= 1.5;
+        model.resize = function (value) {
+            console.log(value);
+            model.box1.geometry.width = value;
+            model.box1.geometry.height = value;
             model.box1.view = null;
             model.box1.recalc();
+            console.log(model.box1.geometry.width);
         };
 
         var square = Physics.body('rectangle', {
