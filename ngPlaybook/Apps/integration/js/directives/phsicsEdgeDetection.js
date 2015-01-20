@@ -1,8 +1,9 @@
 ﻿(function (module) {
 
-    module.directive("physicsEdgeDetection", function (Physics, world) {
+    module.directive("physicsEdgeDetection", function (Physics) {
         return {
             restrict: "E",
+            require: "^physicsCanvas",
             scope: {
                 minX: "@",
                 minY: "@",
@@ -10,12 +11,12 @@
                 maxY: "@",
                 restitution: "@"
             },
-            link: function (scope) {
+            link: function (scope, element, attributes, canvas) {
                 var bounds = Physics.aabb(parseInt(scope.minX),
                                           parseInt(scope.minY),
                                           parseInt(scope.maxX),
                                           parseInt(scope.maxY));
-                world.add(Physics.behavior('edge-collision-detection', {
+                canvas.add(Physics.behavior('edge-collision-detection', {
                     aabb: bounds,
                     restitution: parseFloat(scope.restitution)
                 }));

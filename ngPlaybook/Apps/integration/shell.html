@@ -15,7 +15,7 @@
         </div>
         <div class="row" ng-controller="movingObjectController as objects">
             <div class="col-md-8">
-                <physics-canvas width="600" height="400">
+                <physics-canvas width="600" height="400" world="objects.world">
 
                     <physics-body type="rectangle" body="objects.box1"
                                   options="{x:450, y:10, vy:-0.3, width:15, height:15}">
@@ -68,8 +68,6 @@
 
     <script src="module.js"></script>
     <script src="js/services/physics.js"></script>
-    <script src="js/services/world.js"></script>
-    <script src="js/services/ticker.js"></script>
     <script src="js/directives/physicsCanvas.js"></script>
     <script src="js/directives/phsicsEdgeDetection.js"></script>
     <script src="js/directives/physicsBehavior.js"></script>
@@ -77,13 +75,5 @@
     <script src="js/controllers/movingObjects.js"></script>
     <script src="js/directives/tubular.js"></script>
     <script src="js/directives/knob.js"></script>
-    <script>
-
-        //$(function () {
-        //    $(".dial").knob();
-        //});
-
-    </script>
-
 </body>
 </html>

@@ -1,17 +1,18 @@
 ﻿
 (function (module) {
 
-    module.directive("physicsBody", function (Physics, world) {
+    module.directive("physicsBody", function (Physics) {
         return {
             restrict: "E",
+            require: "^physicsCanvas",
             scope: {
                 options: "=",
                 body: "=",
                 type: "@"
             },
-            link: function (scope) {
+            link: function (scope, element, attributes, canvas) {
                 scope.body = Physics.body(scope.type, scope.options);
-                world.add(scope.body);
+                canvas.add(scope.body);
             }
         };
     });

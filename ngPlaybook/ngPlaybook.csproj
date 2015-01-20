@@ -136,11 +136,10 @@
     <Content Include="Apps\integration\js\directives\physicsCanvas.js" />
     <Content Include="Apps\integration\js\directives\tubular.js" />
     <Content Include="Apps\integration\js\services\physics.js" />
-    <Content Include="Apps\integration\js\services\ticker.js" />
-    <Content Include="Apps\integration\js\services\world.js" />
     <Content Include="Apps\integration\module.js" />
     <Content Include="Apps\integration\shell.html" />
     <Content Include="Apps\integration\templates\nav.html" />
+    <Content Include="Apps\integration\templates\physicsCanvas.html" />
     <Content Include="Apps\ui\js\controllers\adminController.js" />
     <Content Include="Apps\ui\js\controllers\costController.js" />
     <Content Include="Apps\ui\js\controllers\customersController.js" />

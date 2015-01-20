@@ -1,24 +1,52 @@
 ﻿(function (module) {
 
-    module.directive("physicsCanvas", function (Physics, world, ticker) {
+    module.directive("physicsCanvas", function (Physics) {
+
+        var preLink = function (scope, element) {
+
+            var canvas = element[0].querySelector("canvas");
+            var renderer = Physics.renderer("canvas", {
+                el: canvas,
+                width: scope.width,
+                height: scope.height
+            });
+
+            Physics(function (world) {
+                scope.world = world;
+                scope.world.add(renderer);
+            });
+        };
+
+        var postLink = function (scope) {
+            Physics.util.ticker.on(function (time) {
+                scope.world.step(time);
+            });
+
+            scope.world.on('step', function () {
+                scope.world.render();
+            });
+
+            Physics.util.ticker.start();
+        };
+
         return {
             restrict: "E",
             transclude: true,
-            template: "<canvas width={{width}} height={{height}}></canvas><div ng-transclude></div>",
+            templateUrl: "templates/physicsCanvas.html",
             scope: {
                 width: "@",
                 height: "@"
             },
-            link: function (scope, element) {
-                var canvas = element.find("canvas");
-                var renderer = Physics.renderer('canvas', {
-                    el: canvas[0],
-                    width: scope.width,
-                    height: scope.height
-                });
-                world.add(renderer);
-                canvas.attr("style", "");
-                ticker.start();
+            controller: function ($scope) {           
+                this.add = function(thing) {
+                    $scope.world.add(thing);
+                }
+            },
+            compile: function() {
+                return {
+                    pre: preLink,
+                    post: postLink
+                }
             }
         };
     });
